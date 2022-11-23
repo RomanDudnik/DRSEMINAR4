@@ -33,6 +33,9 @@ else
 //82 -> 10
 //9012 -> 12
 
+//Вариант 1 (перевод отрицательных чисел в положительные перед запросом метода)
+
+/*
 int SumDigit(int number)
 {
     int sum = 0;
@@ -60,9 +63,43 @@ else
     int sum = SumDigit(digitsNegative);
     Console.WriteLine($"The sum of the digits of your number {digits} is a {sum} ");
 }
+*/
+
+//Вариант 2 (работа с отрицательными числами в методе)
+
+/*
+int SumDigit(int number)
+{
+    int sum = 0;
+    if (number > 0)
+    {
+        while (number > 0)
+        {
+            sum = sum + number % 10;
+            number = number/10;
+        }
+        return sum;
+    }
+    else
+    {
+        while (number < 0)
+        {
+            sum = sum + number % 10;
+            number = number/10;
+        }
+        return sum*-1;
+    }
+}
+
+Console.WriteLine("Input your number: ");
+int digits = Convert.ToInt32(Console.ReadLine());
 
 
+int sum = SumDigit(digits);
+Console.WriteLine($"The sum of the digits of your number {digits} is a {sum} ");
+*/
 
 //Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 //1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 //6, 1, 33 -> [6, 1, 33]
+
