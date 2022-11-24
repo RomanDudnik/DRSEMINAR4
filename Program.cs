@@ -103,3 +103,57 @@ Console.WriteLine($"The sum of the digits of your number {digits} is a {sum} ");
 //1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 //6, 1, 33 -> [6, 1, 33]
 
+//Вариант 1 (с методом создания массива только для 8 элементов)
+
+int [] EightSizeArray (int min, int max)
+{
+    int [] array = new int [8];
+    for (int index = 0; index < 8; index++)
+        array[index] = new Random().Next(min, max + 1);
+    return array;
+}
+
+void OutputArray (int [] array)
+{
+    for (int i = 0; i < array.Length; i++)
+        Console.Write(array[i] + " ");
+}
+
+Console.WriteLine("Enter the minimum segment of your array : ");
+int minSegment = Convert.ToInt32 (Console.ReadLine());
+
+Console.WriteLine("Enter the maximum segment of your array : ");
+int maxSegment = Convert.ToInt32 (Console.ReadLine());
+
+int [] array1 = EightSizeArray(minSegment, maxSegment);
+OutputArray(array1);
+
+//Вариант №2 (с методом свободного выбора длинны и отрезка элементов заполнения массива)
+
+/*
+int [] NewMethArray (int size, int min, int max)
+{
+    int [] array = new int [size];
+    for (int index = 0; index < size; index++)
+        array[index] = new Random().Next(min, max + 1);
+    return array;
+}
+
+void OutputArray (int [] array)
+{
+    for (int i = 0; i < array.Length; i++)
+        Console.Write(array[i] + " ");
+}
+
+Console.WriteLine("Enter your array size: ");
+int lenght = Convert.ToInt32 (Console.ReadLine());
+
+Console.WriteLine("Enter the minimum segment of your array : ");
+int minSegment = Convert.ToInt32 (Console.ReadLine());
+
+Console.WriteLine("Enter the maximum segment of your array : ");
+int maxSegment = Convert.ToInt32 (Console.ReadLine());
+
+int [] array1 = NewMethArray(lenght, minSegment, maxSegment);
+OutputArray(array1);
+*/
