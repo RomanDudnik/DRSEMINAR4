@@ -105,6 +105,7 @@ Console.WriteLine($"The sum of the digits of your number {digits} is a {sum} ");
 
 //Вариант 1 (с методом создания массива только для 8 элементов)
 
+/*
 int [] EightSizeArray (int min, int max)
 {
     int [] array = new int [8];
@@ -127,8 +128,81 @@ int maxSegment = Convert.ToInt32 (Console.ReadLine());
 
 int [] array1 = EightSizeArray(minSegment, maxSegment);
 OutputArray(array1);
+*/
 
-//Вариант №2 (с методом свободного выбора длинны и отрезка элементов заполнения массива)
+//Вариант 2 (программа сама определяет отрезки(рандом) в массиве из восьми элементов)
+/*
+int [] EightSizeArray (int min, int max)
+{
+    int [] array = new int [8];
+    for (int index = 0; index < 8; index++)
+        array[index] = new Random().Next(min, max + 1);
+    return array;
+}
+
+void OutputArray (int [] array)
+{
+    for (int i = 0; i < array.Length; i++)
+        Console.Write(array[i] + " ");
+}
+
+int numberA = new Random().Next();
+int numberB = new Random().Next();
+
+if (numberA > numberB)
+{
+    int [] array1 = EightSizeArray(numberB, numberA);
+    OutputArray(array1);
+}
+else
+{
+    int [] array1 = EightSizeArray(numberA, numberB);
+    OutputArray(array1);    
+}
+*/
+
+//Вариант 3 (программа сама определяет отрезки(рандом) в массиве 
+//из восьми элементов и показывает заданный ей макс и мин отрезка)
+
+/*
+int [] EightSizeArray (int min, int max)
+{
+    int [] array = new int [8];
+    for (int index = 0; index < 8; index++)
+        array[index] = new Random().Next(min, max + 1);
+    return array;
+}
+
+void OutputArray (int [] array)
+{
+    for (int i = 0; i < array.Length; i++)
+        Console.Write(array[i] + " ");
+}
+
+int numberA = new Random().Next();
+int numberB = new Random().Next();
+
+if (numberA > numberB)
+{
+    Console.WriteLine($"The random minimum value of the segment of the array will be {numberB} ");
+    Console.WriteLine($"The random minimum value of the segment of the array will be {numberA} ");
+    int minSegment = numberB;
+    int maxSegment = numberA;
+    int [] array1 = EightSizeArray(minSegment, maxSegment);
+    OutputArray(array1);
+}
+else
+{
+    Console.WriteLine($"The random minimum value of the segment of the array will be {numberA} ");
+    Console.WriteLine($"The random minimum value of the segment of the array will be {numberB} ");
+    int minSegment = numberA;
+    int maxSegment = numberB;
+    int [] array1 = EightSizeArray(minSegment, maxSegment);
+    OutputArray(array1);
+}
+*/
+
+//Вариант №4 (с методом свободного выбора длинны и отрезка элементов заполнения массива)
 
 /*
 int [] NewMethArray (int size, int min, int max)
