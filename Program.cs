@@ -28,6 +28,42 @@ else
 }
 */
 
+//Вариант 2 (работает с отрицательными степенями)
+
+/*
+double NatDegree (double A, double B)
+{
+    if (B >= 0)
+    {
+        double power = A;
+        for (int current = 1; current < B; current++)
+        {
+            power *= A;
+        }
+        return power;
+    }
+    else
+    {
+        double power = A;
+        for (int current = 1; current < B*-1; current++)
+        {
+            power *= A;
+        }
+        return 1/power;
+    }
+}
+
+Console.WriteLine("Input your first number: ");
+double numberA = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Input your second number: ");
+double numberB = Convert.ToInt32(Console.ReadLine());
+
+double degree = NatDegree(numberA, numberB);
+
+Console.WriteLine($"The number {numberA} to raise by power {numberB} will be {degree} ");
+*/
+
 //Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 //452 -> 11
 //82 -> 10
