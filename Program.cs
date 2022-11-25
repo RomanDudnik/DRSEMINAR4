@@ -66,7 +66,7 @@ double degree = NatDegree(numberA, numberB);
 Console.WriteLine($"The number {numberA} to raise by power {numberB} will be {degree} ");
 */
 
-//Вариант 3 (работает с отрицательными степенями и целыми числами)
+//Вариант 3 (работает с целыми числами и отрицательными степенями)
 
 /*
 int NatDegree (int A, int B)
@@ -208,6 +208,7 @@ OutputArray(array1);
 */
 
 //Вариант 2 (программа сама определяет отрезки(рандом) в массиве из восьми элементов)
+
 /*
 int [] EightSizeArray (int min, int max)
 {
@@ -262,7 +263,7 @@ int numberB = new Random().Next();
 if (numberA > numberB)
 {
     Console.WriteLine($"The random minimum value of the segment of the array will be {numberB} ");
-    Console.WriteLine($"The random minimum value of the segment of the array will be {numberA} ");
+    Console.WriteLine($"The random maximum value of the segment of the array will be {numberA} ");
     int minSegment = numberB;
     int maxSegment = numberA;
     int [] array1 = EightSizeArray(minSegment, maxSegment);
@@ -271,7 +272,7 @@ if (numberA > numberB)
 else
 {
     Console.WriteLine($"The random minimum value of the segment of the array will be {numberA} ");
-    Console.WriteLine($"The random minimum value of the segment of the array will be {numberB} ");
+    Console.WriteLine($"The random maximum value of the segment of the array will be {numberB} ");
     int minSegment = numberA;
     int maxSegment = numberB;
     int [] array1 = EightSizeArray(minSegment, maxSegment);
